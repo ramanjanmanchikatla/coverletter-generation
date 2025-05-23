@@ -1,0 +1,87 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 33% 98%;
+    --foreground: 220 40% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 40% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 40% 12%;
+
+    --primary: 222 80% 53%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 214 32% 91%;
+    --secondary-foreground: 220 40% 12%;
+
+    --muted: 214 32% 91%;
+    --muted-foreground: 220 20% 40%;
+
+    --accent: 214 32% 91%;
+    --accent-foreground: 220 40% 12%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 20% 86%;
+    --input: 220 20% 86%;
+    --ring: 222 80% 53%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 220 40% 12%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 40% 14%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 40% 14%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 222 80% 53%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 220 30% 24%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 30% 24%;
+    --muted-foreground: 220 20% 70%;
+
+    --accent: 220 30% 24%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 30% 24%;
+    --input: 220 30% 24%;
+    --ring: 222 80% 53%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.form-step-appear {
+  @apply transition-opacity duration-300 ease-in;
+  opacity: 0;
+}
+
+.form-step-appear-active {
+  opacity: 1;
+}
